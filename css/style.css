@@ -186,8 +186,8 @@ h6 {
 
 /* PORTFOLIO */
 .portfolio-content {
-    margin-top: 4rem;
-    padding-top: 4rem;
+    margin-top: 3.5rem;
+    padding-top: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,6 +218,8 @@ h6 {
     display: flex;
     align-self: center;
     justify-content: space-between;
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 .card-title {
@@ -358,7 +360,6 @@ h6 {
     font-size: 16px !important;
     width: 190px;
     height: 45px;
-    margin-bottom: 2rem;
     transition: .2s ease-in-out;
 }
 
@@ -371,6 +372,57 @@ h6 {
     text-align: center;
 }
 
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-title {
+    font-weight: 800;
+    font-size: 23px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+.service-text {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #6D7E8A;
+    font-size: 17px;
+}
+
+.btn-view>.inside-text>i {
+    margin-left: 8px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 16px !important;
+}
+
+.col-services>.card>#service-icon>.bx {
+    font-size: 35px !important;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #7DC2E2;
+}
+
+.col-services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 410px;
+    padding: 0.8rem;
+}
+
 /* MEDIA QUERYS */
 @media (max-width: 456px) {
     .cover-letter-text {
@@ -378,9 +430,15 @@ h6 {
         font-size: 15px !important;
         text-align: center;
     }
+
     .slogan {
-        font-size: 15.5px !important;
+        font-size: 17px !important;
         padding-bottom: 1.3rem;
+    }
+
+    .cards-demo {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
     }
 }
 
@@ -447,6 +505,9 @@ h6 {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+    .col-services {
+        width: 100%;
+    }
 }
 
 
@@ -464,6 +525,9 @@ h6 {
     .branding {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    .col-services {
+        width: 100%;
     }
 }
 
@@ -484,7 +548,20 @@ h6 {
     .card {
         width: 100% !important;
     }
+
+    .services {
+        display: grid;
+        grid-template-columns: 1fr;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 
-@media (min-width: 1400px) {}
+@media (max-width: 1400px) {
+    .cards-demo {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}

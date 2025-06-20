@@ -439,7 +439,7 @@ h6 {
     justify-content: space-between;
     padding-left: 3rem;
     padding-right: 3rem;
-    
+
 }
 
 .col-team {
@@ -449,18 +449,19 @@ h6 {
 .team-title {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
-    font-size: 21px;
+    font-size: 22px;
 }
 
 .team-software {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
-    font-size: 15px;
+    font-size: 14px;
     color: #0293D7;
+    margin-bottom: 1.9rem;
 }
 
 .team-text {
@@ -469,6 +470,50 @@ h6 {
     font-weight: 500;
     font-size: 14px;
     color: #6D7E8A;
+}
+
+.pill-team {
+    background-color: #E0F2FE;
+    border-radius: 20px;
+    width: auto;
+    height: 25px;
+    text-align: center;
+    color: #143E5C;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 15px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.pill-text-team {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px !important;
+}
+
+.bi {
+    margin-right: 8px;
+    font-size: 19px;
+    color: #6D7E8A;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.bi:hover {
+    transition: .2s ease-in-out;
+    color: #0293D7;
 }
 
 /* MEDIA QUERYS */
@@ -506,6 +551,13 @@ h6 {
 
     .conver-text {
         padding-top: 1.5rem !important;
+    }
+    .container-team {
+        padding: 1rem !important;
+    }
+    .team {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important;
     }
 }
 
@@ -553,8 +605,12 @@ h6 {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
     .col-services {
         width: 100%;
+    }
+    .container-team {
+        padding: 0;
     }
 }
 
@@ -574,8 +630,14 @@ h6 {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
     .col-services {
         width: 100%;
+    }
+
+    .team {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -611,5 +673,10 @@ h6 {
     .cards-demo {
         padding-left: 4rem;
         padding-right: 4rem;
+    }
+
+    .team {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }

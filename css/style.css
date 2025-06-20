@@ -372,6 +372,11 @@ h6 {
     text-align: center;
 }
 
+.content-service {
+    background-color: #F7F7F7;
+    padding-bottom: 4rem;
+}
+
 .services {
     display: flex;
     align-items: center;
@@ -421,6 +426,49 @@ h6 {
     flex-wrap: wrap;
     width: 410px;
     padding: 0.8rem;
+}
+
+/* TEAM */
+.container-team {
+    padding: 2rem;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    
+}
+
+.col-team {
+    padding: 0.7rem;
+}
+
+.team-title {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 21px;
+}
+
+.team-software {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+    color: #0293D7;
+}
+
+.team-text {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 14px;
+    color: #6D7E8A;
 }
 
 /* MEDIA QUERYS */

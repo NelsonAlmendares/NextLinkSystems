@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="./css/effects.css">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
@@ -442,44 +448,114 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container">
-                <div class="container container-team">
-                    <div class="portfolio-content">
-                        <h1 class="portfolio-header">Get in touch</h1>
-                        <p class="portfolio-text">Conoce a los profesionales detrás de nuestras soluciones tecnológicas.
-                        </p>
+        </div>
+    </div>
+    <div class="container contact">
+        <div class="contact-content">
+            <h1 class="portfolio-header">Get in touch</h1>
+            <p class="portfolio-text">¿Tienes un proyecto en mente? Estamos aquí para ayudarte a hacerlo
+                realidad.</p>
+        </div>
+        <div class="form-contact">
+            <div class="send-data">
+                <div class="row contact-form">
+                    <div class="col-md-7 form-info">
+                        <div class="data-form">
+                            <h4 class="contact-title">Envíanos un mensaje</h4>
+                            <p class="contact-text">Completa el formulario y te responderemos a la brevedad.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="" class="form-label label-contact">Nombre</label>
+                                    <input type="text" id="" placeholder="Tu nombre"
+                                        class="form-control form-control-text" aria-describedby="passwordHelpBlock">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="" class="form-label label-contact">Apellido</label>
+                                    <input type="text" id="" placeholder="Tu apellido"
+                                        class="form-control form-control-text" aria-describedby="passwordHelpBlock">
+                                </div>
+                                <div class="mb-1 mt-3">
+                                    <label for="" class="form-label label-contact">Correo electrónico</label>
+                                    <input type="text" id="" placeholder="tu@email.com"
+                                        class="form-control form-control-text" aria-describedby="passwordHelpBlock">
+                                </div>
+                                <div class="mb-1 mt-3">
+                                    <label for="" class="form-label label-contact">Asunto</label>
+                                    <input type="text" id="" placeholder="¿En qué podemos ayudarte?"
+                                        class="form-control form-control-text" aria-describedby="passwordHelpBlock">
+                                </div>
+                                <div class="mb-1 mt-3">
+                                    <label for="" class="form-label label-contact">Mensaje</label>
+                                    <textarea class="form-control form-control-text"
+                                        placeholder="Cuentanos sobre tu proyecto o consulta..."
+                                        id="exampleFormControlTextarea1" rows="4"></textarea>
+                                </div>
+                                <div class="mb-1 mt-3">
+                                    <button class="btn-contact">Enviar mensaje</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-
+                    <div class="col-md-5 form-info">
+                        <div class="row">
+                            <div class="info">
+                                <h4 class="contact-title">Información de contacto</h4>
+                                <p class="contact-text">Otras formas de ponerte en contacto con nosotros.</p>
+                                <div class="info-side">
+                                    <div class="banner-info-contact">
+                                        <i class='bx bx-envelope'></i>
+                                        <div class="banner-contact">
+                                            <h5 class="banner-contact-title">Correo electrónico</h5>
+                                            <p class="banner-contact-text">gestiones@nextLinksystems.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="banner-info-contact">
+                                        <i class='bx bx-phone'></i>
+                                        <div class="banner-contact">
+                                            <h5 class="banner-contact-title">Teléfono</h5>
+                                            <p class="banner-contact-text">+503 7857 3605</p>
+                                        </div>
+                                    </div>
+                                    <div class="banner-info-contact">
+                                        <i class='bx bx-location'></i>
+                                        <div class="banner-contact">
+                                            <h5 class="banner-contact-title">Dirección</h5>
+                                            <p class="banner-contact-text">4 Calle Ote., San Salvador</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map">
+                                <div id="map"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 
 
-    <footer class="bg-light text-dark pt-5 pb-4">
+    <footer class="bg-light text-dark pt-4 pb-4">
         <div class="container text-md-left">
             <div class="row text-md-left">
 
                 <!-- Logo y descripción -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 nav-footer">
                     <h5 class="text-uppercase mb-4 font-weight-bold">
                         <img src="./src/img/logo.png" alt="NextLink Systems" width="150" class="me-2">
                     </h5>
-                    <p class="text-footer">Creamos soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio en el mundo
-                        digital.</p>
+                    <p class="text-footer">Creamos soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio en el mundo digital.</p>
                     <div class="mt-3">
-                        <a href="#" class="text-dark text-item-footer me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-dark text-item-footer me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-dark text-item-footer me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-dark text-item-footer"><i class="fab fa-linkedin-in"></i></a>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter-x"></i>
+                        <i class="bi bi-linkedin"></i>
                     </div>
                 </div>
 
                 <!-- Navegación -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 nav-footer">
                     <h6 class="fw-bold mb-2 title-footer">Navegación</h6>
                     <p class="mb-1"><a href="#" class="text-dark text-item-footer">Inicio</a></p>
                     <p class="mb-1"><a href="#" class="text-dark text-item-footer">Portafolio</a></p>
@@ -489,7 +565,7 @@
                 </div>
 
                 <!-- Servicios -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 nav-footer">
                     <h6 class="fw-bold mb-2 title-footer">Servicios</h6>
                     <p class="mb-1"><a href="#" class="text-dark text-item-footer">Desarrollo Web</a></p>
                     <p class="mb-1"><a href="#" class="text-dark text-item-footer">Aplicaciones Móviles</a></p>
@@ -498,7 +574,7 @@
                 </div>
 
                 <!-- Legal -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 nav-footer">
                     <h6 class="fw-bold mb-2 title-footer">Legal</h6>
                     <p class="mb-1"><a href="#" class="text-dark text-item-footer">Política de Privacidad</a></p>
                     <p class="mb-1"><a href="#" class="text-dark text-item-footer">Términos y Condiciones</a></p>
@@ -508,7 +584,7 @@
 
             <hr class="my-3">
 
-            <div class="row text-center">
+            <div class="row footer-info">
                 <div class="col-md-12 footer-final">
                     <p class="mb-0">
                         © 2025 NextLink Systems. Todos los derechos reservados.
@@ -527,6 +603,17 @@
             "@splidejs/splide": "https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.esm.min.js"
             }
         }
+    </script>
+
+    <script>
+        var map = L.map('map').setView([13.697214, -89.191335], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: ''
+        }).addTo(map);
+
+        L.marker([13.697214, -89.191335]).addTo(map)
+            .bindPopup('We are here!.')
+            .openPopup();
     </script>
 
     <script type="module" src="./js/splide/splide.js"></script>

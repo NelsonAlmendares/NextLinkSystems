@@ -128,12 +128,19 @@ h6 {
 .btn-login {
     background-color: #E9E8ED;
     color: #143E5C;
-    width: 80px;
+    width: 120px;
     height: 42px;
     border-radius: 8px;
     font-weight: bold;
     border: none;
     margin-right: 5px;
+    transition: .4s ease-in-out;
+}
+
+.btn-login:hover {
+    transition: .4s ease-in-out;
+    background-color: #B5D0E1;
+    color: #000;
 }
 
 .btn-demo {
@@ -143,6 +150,12 @@ h6 {
     height: 42px;
     border-radius: 8px;
     border: none;
+    transition: .4s ease-in-out;
+}
+
+.btn-demo:hover {
+    background-color: #0D293D;
+    transition: .4s ease-in-out;
 }
 
 .get-started {
@@ -153,6 +166,12 @@ h6 {
     border-radius: 8px;
     border: none;
     margin-right: 5px;
+    transition: .4s ease-in-out;
+}
+
+.get-started:hover {
+    background-color: #0D293D;
+    transition: .4s ease-in-out;
 }
 
 .get-demo {
@@ -163,6 +182,13 @@ h6 {
     border-radius: 8px;
     font-weight: bold;
     border: none;
+    transition: .4s ease-in-out;
+}
+
+.get-demo:hover {
+    transition: .4s ease-in-out;
+    background-color: #B5D0E1;
+    color: #000;
 }
 
 .active {
@@ -225,7 +251,7 @@ h6 {
 .card-title {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: bolder;
+    font-weight: 800;
     font-style: normal;
     font-size: 28px !important;
     height: 80px;
@@ -244,7 +270,7 @@ h6 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px !important;
+    font-size: 15px !important;
     padding-bottom: 0;
     margin-bottom: 0;
     height: 90px;
@@ -398,7 +424,7 @@ h6 {
     font-optical-sizing: auto;
     font-style: normal;
     color: #6D7E8A;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .btn-view>.inside-text>i {

@@ -129,15 +129,15 @@ body {
 .title-demo {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
-    font-size: 51px;
+    font-weight: 500;
+    font-size: 45px;
 }
 
 .text-demo {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
-    font-size: 19px;
+    font-size: 18px;
     width: 65%;
     text-align: center;
     margin-top: 1rem;
@@ -323,7 +323,7 @@ body {
 
 .divider {
     border-top: 1px solid #C4C6C7 !important;
-    width: 100%;
+    width: 95%;
     margin-bottom: 10px;
 }
 
@@ -336,6 +336,73 @@ body {
     margin-bottom: 0;
     padding-bottom: 0;
     width: 250px;
+}
+
+.info-extra-cards-items {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-bottom: 5rem;
+}
+
+.card {
+    width: 250px;
+    background-color: #F2F2F2;
+    border: none;
+    display: flex;
+    align-items: center !important;
+    justify-content: baseline;
+}
+
+.card-body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-info-extra {
+    font-weight: 500;
+    color: #3B82F6;
+    cursor: pointer;
+}
+
+.title-extra {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    height: 25px;
+    text-align: center;
+}
+
+.text-extra {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #4E5458;
+    letter-spacing: -0.5px;
+    height: auto;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.icon-demo-extra {
+    height: 33px;
+    width: 33px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin-bottom: 15px;
+}
+
+.icon-demo-extra>.bx {
+    padding: .5rem;
 }
 
 /* FOOTER */
@@ -385,54 +452,15 @@ footer {
 
 /* MEDIA QUERYS */
 @media (max-width: 456px) {
-    .cover-letter-text {
-        font-weight: 900;
-        font-size: 15px !important;
-        text-align: center;
+    .software-logos {
+        width: 100%;
     }
-
-    .slogan {
-        font-size: 17px !important;
-        padding-bottom: 1.3rem;
-    }
-
-    .cards-demo {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-
-    .form-info {
-        margin: 0 !important;
-        padding: 0 !important;
+    .divider {
+        width: 80%;
     }
 }
 
 @media (max-width: 576px) {
-    .portfolio-header {
-        font-size: 40px !important;
-    }
-
-    .portfolio-text {
-        font-size: 16px !important;
-        font-weight: 400;
-    }
-
-    .add {
-        padding-top: 1rem !important;
-    }
-
-    .conver-text {
-        padding-top: 1.5rem !important;
-    }
-
-    .container-team {
-        padding: 1rem !important;
-    }
-
-    .team {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr) !important;
-    }
 
     .nav-footer {
         padding-left: 3rem;
@@ -448,6 +476,15 @@ footer {
 
     .padd-inside {
         margin-bottom: 4rem !important;
+    }
+
+    .title-demo {
+        font-size: 40px;
+    }
+
+    .title {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
     }
 
     .text-demo {
@@ -466,23 +503,18 @@ footer {
 
 @media (max-width: 1200px) {
     .card {
-        width: 100% !important;
+        margin-bottom: 3rem;
     }
 
     .contact-form-demo {
         padding: 0;
     }
+    .info-extra-cards-items {
+        padding-bottom: 3rem;
+    }
 }
 
 
 @media (max-width: 1400px) {
-    .cards-demo {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
 
-    .team {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll Animations sin librerías</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    section {
+      min-height: 70vh;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .bloque {
+      opacity: 0;
+      transform: translateY(40px);
+      background: #ffffff;
+      padding: 30px;
+      margin: 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .bloque.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Animaciones desde la izquierda y derecha */
+    .from-left {
+      transform: translateX(-50px);
+    }
+
+    .from-right {
+      transform: translateX(50px);
+    }
+
+    .visible.from-left,
+    .visible.from-right {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <h1>Animaciones al hacer scroll</h1>
+    <p>Desplázate para ver los efectos</p>
+  </section>
+
+  <section>
+    <div class="bloque from-left">Bloque 1 - Aparece desde la izquierda</div>
+    <div class="bloque from-left">Bloque 2 - Aparece desde la izquierda</div>
+  </section>
+
+  <section>
+    <div class="bloque from-right">Bloque 3 - Aparece desde la derecha</div>
+    <div class="bloque from-right">Bloque 4 - Aparece desde la derecha</div>
+  </section>
+
+  <section>
+    <div class="bloque">Bloque 5 - Aparece desde abajo</div>
+    <div class="bloque">Bloque 6 - Aparece desde abajo</div>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.bloque').forEach(bloque => {
+      observer.observe(bloque);
+    });
+  </script>
+
+</body>
+
+</html>

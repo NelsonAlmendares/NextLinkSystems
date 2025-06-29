@@ -4,6 +4,16 @@
 /* VARIABLES */
 
 /* GENERAL */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
 
 /* LOGO */
 .img-logo {
@@ -144,18 +154,22 @@ h6 {
 }
 
 .btn-demo {
-    background-color: #143E5C;
-    color: #E9E8ED;
-    width: 130px;
-    height: 42px;
-    border-radius: 8px;
-    border: none;
+    background-color: #143E5C !important;
+    width: 130px !important;
+    height: 42px !important;
+    border-radius: 8px !important;
+    border: none !important;
     transition: .4s ease-in-out;
+    color: #E9E8ED;
 }
 
-.btn-demo:hover {
-    background-color: #0D293D;
-    transition: .4s ease-in-out;
+a>.btn-demo:hover {
+    background-color: #0D293D !important;
+    transition: .4s ease-in-out !important;
+}
+
+.demo-btn {
+    text-decoration: none !important;
 }
 
 .get-started {
@@ -716,7 +730,47 @@ footer {
     border-top: 1px solid #E4E5E5;
 }
 
+/* SPLASH SCREEN */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    /* Evitar scroll durante splash */
+    background: #ffffff;
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease;
+}
+
+.splash-screen.fade-out {
+    opacity: 0;
+}
+
+.splash-logo {
+    width: 7rem;
+    height: auto;
+    animation: blinker 2s linear infinite;
+}
+
+#main {
+    display: none;
+}
+
 /* MEDIA QUERYS */
+
 @media (max-width: 456px) {
     .cover-letter-text {
         font-weight: 900;
@@ -733,7 +787,8 @@ footer {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
-    .form-info{
+
+    .form-info {
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -765,6 +820,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(1, 1fr) !important;
     }
+
     .nav-footer {
         padding-left: 3rem;
         padding-right: 3rem;
@@ -822,22 +878,28 @@ footer {
     .container-team {
         padding: 0;
     }
-    .form-info>.row{
+
+    .form-info>.row {
         margin: 0 !important;
         padding: 0 !important;
     }
+
     .data-form {
         margin: 10px 0px 0px 0px;
     }
+
     .map {
         width: 100% auto;
     }
+
     #map {
         width: auto !important;
     }
+
     .info {
         margin-top: 20px;
     }
+
     .text-footer {
         margin-bottom: 0;
         padding-bottom: 0;

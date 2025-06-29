@@ -1,6 +1,10 @@
 /* FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+body {
+    background-color: #F2F2F2;
+}
+
 /* LOGO */
 .img-logo {
     height: 50px;
@@ -12,18 +16,17 @@
 
 .navbar-inside-custom {
     border-radius: 15px;
-    background-color: #757E85;
-    /* border: 1px solid #BECBD4; */
+    background-color: rgb(78, 84, 88);
     padding-left: 5px;
     padding-right: 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .navbar-inside-custom {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-        background-color: rgba(213, 226, 237, 0.3);
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
 }
@@ -36,82 +39,13 @@
     font-size: 14px;
 }
 
-.add-info-img {
-    height: 27px;
-    margin-right: 5px;
-}
-
-.add {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-.add-info {
-    border-radius: 30px;
-    border: 1px solid #6D7E8A;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 185px;
-    height: 42px;
-    margin-top: 5rem;
-    background-color: transparent;
-}
-
-h6 {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-.add-text {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
+.active {
     font-weight: bolder;
-    font-style: normal;
-    font-size: 15px;
-}
-
-.cover-letter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 4rem;
-    margin-top: 4rem;
-}
-
-.cover-letter-text {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-size: 52px;
-}
-
-.demos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.branding {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 5rem;
-    padding-right: 5rem;
-}
-
-.branding-img {
-    margin-top: 5rem;
-    border-radius: 10px 10px 0 0;
 }
 
 /* BOTONES */
 .btn-login {
-    background-color: #E9E8ED;
+    background-color: #fff;
     color: #143E5C;
     width: 120px;
     height: 42px;
@@ -141,6 +75,10 @@ h6 {
 .btn-demo:hover {
     background-color: #0D293D;
     transition: .4s ease-in-out;
+}
+
+.demo-btn {
+    text-decoration: none !important;
 }
 
 .get-started {
@@ -176,30 +114,229 @@ h6 {
     color: #000;
 }
 
-.active {
-    font-weight: bolder;
-}
+/* MAIN */
 
-.slogan {
+.title {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 2.5rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title-demo {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 51px;
+}
+
+.text-demo {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 19px;
+    width: 65%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* CONTACT */
+.contact-form-demo {
+    padding: 2rem;
+}
+
+.contact-form {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 1.8rem;
+    background-color: rgb(244, 244, 244);
+}
+
+.padd-inside {
+    padding: 2rem;
+}
+
+.form-input-contact {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgb(228, 229, 229);
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
+    font-size: 15px;
+    padding: 0.4rem;
+    color: rgb(52, 56, 58);
+    transition: .1s ease;
+}
+
+.form-input-contact:focus {
+    border: 1px solid rgb(20, 62, 92);
+    transition: .1s ease-in-out;
+    outline: 1px solid rgb(20, 62, 92);
+}
+
+.label-custom {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.label-mail-contact {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 15px;
+    color: rgb(52, 56, 58);
+}
+
+.label-send-form {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(52, 56, 58);
+}
+
+.terms {
+    color: #3B82F6;
+    font-weight: 600;
+}
+
+.send-data {
+    border-radius: 25px;
+    height: 45px;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    background: #143E5C;
+}
+
+/* Oculta el checkbox nativo */
+.form-check-input {
+    opacity: 0;
+    position: absolute;
+}
+
+/* Estilo base del checkbox personalizado */
+.form-check-label {
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+/* Caja del checkbox */
+.form-check-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 21px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+/* Checkmark (invisible por defecto) */
+.form-check-label::after {
+    content: "✓";
+    position: absolute;
+    left: 5px;
+    top: -1px;
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Estilo cuando está marcado */
+.form-check-input:checked+.form-check-label::before {
+    background-color: #143E5C;
+    border-color: #143E5C;
+}
+
+.form-check-input:checked+.form-check-label::after {
+    opacity: 1;
+}
+
+/* Estilo al hacer hover */
+.form-check-input:hover+.form-check-label::before {
+    border-color: #143E5C;
+}
+
+/* Estilo al estar deshabilitado */
+.form-check-input:disabled+.form-check-label {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.item-demo {
+    display: flex;
+    align-items: baseline;
+
+}
+
+.icon-demo {
+    height: 33px;
+    margin-right: 1.3rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.icon-demo>.bx {
+    padding: .5rem;
+}
+
+.title-demo-side {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.text-demo-side {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.software-logos {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row;
+    padding-bottom: 1.3rem;
+    padding-top: 1.8rem;
+}
+
+.divider {
+    border-top: 1px solid #C4C6C7 !important;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.solutions {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
     font-style: normal;
-    font-size: 19px !important;
-    text-align: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    font-size: 12px !important;
+    color: #6D7E8A;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 250px;
 }
-
-.title {
-    padding-top: 4rem;
-}
-
-
 
 /* FOOTER */
 .text-footer {
@@ -263,7 +400,8 @@ footer {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
-    .form-info{
+
+    .form-info {
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -295,6 +433,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(1, 1fr) !important;
     }
+
     .nav-footer {
         padding-left: 3rem;
         padding-right: 3rem;
@@ -302,152 +441,36 @@ footer {
 }
 
 @media (max-width: 768px) {
-
-    .add {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        background-color: transparent;
-    }
-
-
-    .add-text {
-        font-size: 13px !important;
-    }
-
-    .add-info {
-        width: 180px;
-        margin-top: 3rem;
-        font-size: 13px !important;
-    }
-
-    .cover-letter {
-        padding-bottom: 2rem !important;
-        margin-top: 2rem !important;
-    }
-
-    .cover-letter-text {
-        font-size: 35px !important;
-    }
-
-    .branding {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .branding-img {
-        margin-top: 4rem;
-    }
-
-    .slogan {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    .col-services {
-        width: 100%;
-    }
-
-    .container-team {
-        padding: 0;
-    }
-    .form-info>.row{
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    .data-form {
-        margin: 10px 0px 0px 0px;
-    }
-    .map {
-        width: 100% auto;
-    }
-    #map {
-        width: auto !important;
-    }
-    .info {
-        margin-top: 20px;
-    }
     .text-footer {
         margin-bottom: 0;
         padding-bottom: 0;
+    }
+
+    .padd-inside {
+        margin-bottom: 4rem !important;
+    }
+
+    .text-demo {
+        font-size: 16px;
+        width: 95%;
     }
 }
 
 
 @media (max-width: 992px) {
-
-    .cover-letter {
-        padding-bottom: 3rem;
-        margin-top: 3rem;
-    }
-
-    .cover-letter-text {
-        font-size: 46px;
-    }
-
-    .branding {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .col-services {
-        width: 100%;
-    }
-
-    .team {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-
-
-    .footer-final {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column !important;
-        text-align: center;
+    .padd-inside {
+        padding: 1rem;
     }
 }
 
 
 @media (max-width: 1200px) {
-    .min-cards {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-
-    .cards-demo {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 600px;
-    }
-
     .card {
         width: 100% !important;
     }
 
-    .services {
-        display: grid;
-        grid-template-columns: 1fr;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .contact-form {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-
-    #map {
-        height: 225px;
+    .contact-form-demo {
+        padding: 0;
     }
 }
 
@@ -461,10 +484,5 @@ footer {
     .team {
         padding-left: 1rem;
         padding-right: 1rem;
-    }
-
-    .contact-form {
-        padding-left: 3rem;
-        padding-right: 3rem;
     }
 }

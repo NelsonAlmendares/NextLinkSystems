@@ -15,6 +15,10 @@
     transform: translateY(0) !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* LOGO */
 .img-logo {
     height: 50px;
